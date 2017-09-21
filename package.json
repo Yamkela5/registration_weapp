@@ -1,0 +1,19 @@
+{
+  "name": "registration_webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Pasie",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "e": "0.0.4",
+    "express": "^4.15.4",
+    "express-flash": "git://github.com/RGBboy/express-flash.git",
+    "express-session": "^1.15.5",
+    "mongoose": "^4.11.11"
+  }
+}
