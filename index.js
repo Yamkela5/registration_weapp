@@ -25,9 +25,11 @@ app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 * 30 }}));
 app.use(flash());
 
 // start Routes
-app.get('/registration', regNumberRoutes.index);
+app.get('/registration', regNumberRoutes.Index);
 app.post('/registration', regNumberRoutes.add);
-// app.get('/registration', regNumberRoutes.filtter);
+app.get('/registration', regNumberRoutes.findAll);
+app.get('/registration', regNumberRoutes.fillter);
+
 
 
 //start the server
