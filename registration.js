@@ -3,7 +3,8 @@ module.exports = function(models) {
      var regNumberList = [];
 
      const Index = function(req, res) {
-       models.RegNumberSchema.find({}, function(err, results){
+       var name = req.body.name
+       models.RegNumberSchema.findOne({ name:name}, function(err, results){
 
          if (err) {
            console.log(err);
@@ -13,16 +14,7 @@ module.exports = function(models) {
 
      };
 
-     const findAll = function (req, res) {
-       models.RegNumberSchema.find({},function( err,results){
 
-         if (err) {
-           console.log(err);
-         }
-
-       res.render('regis/add')
-     });
-}
      const add = function(req, res, next) {
 
          var regNumber = {
@@ -64,17 +56,19 @@ module.exports = function(models) {
          }
      }
      const fillter = function(req, res){
-       var towns= req.body.NumberPlates
+       var towns = req.query.NumberPlates;
+
+      console.log(towns);
        models.RegNumberSchema.find({
          name:{
-           "$regex":'.*'+ towns +'.*'
+           $regex: towns
          }
        },function (err, townPlates) {
          if (err) {
            console.log(err);
          }else{
            res.render('regis/add',{
-             results:townPlates
+             message : townPlates
            })
          }
        })
@@ -82,7 +76,6 @@ module.exports = function(models) {
      return {
          Index,
          add,
-         findAll,
          fillter
      }
 }

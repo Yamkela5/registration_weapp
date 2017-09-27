@@ -27,8 +27,8 @@ app.use(flash());
 // start Routes
 app.get('/registration', regNumberRoutes.Index);
 app.post('/registration', regNumberRoutes.add);
-app.get('/registration', regNumberRoutes.findAll);
-app.get('/registration', regNumberRoutes.fillter);
+app.get('/filter', regNumberRoutes.fillter);
+
 
 
 
