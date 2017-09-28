@@ -8,9 +8,10 @@ do exactly what you tell.
 
 ## How to set up a development environment:
 - express-app need to be install,
-- Install Express.js
 - On my registration webApp i use the npm install,
 - To create a package.json run:> npm init
+- Install Express.js
+- Install handlebars.
 - On that package.json file its where it keeps all your installation showing the versions that you have eg.version 0.0.1.
 - and you will also need a Node.js installing it.
 - In order to store my to keep my numberplates im using a database firstly you have to install using npm install --save Mongodb,
@@ -24,4 +25,4 @@ do exactly what you tell.
 ## How to start the app:
 - In oder to start an registration app you will need to write in a browser the server that you have on your file eg.index.js
 - Use localhost 3001 in oder to get the  app,
-- Or use the username tha is on github.
+- You can find my app in heroku.
